@@ -5,19 +5,22 @@ all: clean env test-versions package
 env: env/bin/activate
 
 env/bin/activate:
-	bin/env.sh
+	sbin/env.sh
 
 test:
-	bin/tests.sh $(PYTHON_VERSION)
+	sbin/tests.sh $(PYTHON_VERSION)
 
 test-clean:
 	rm -Rf env-*
 
 clean:
-	bin/clean.sh
+	sbin/clean.sh
 
-package: clean env
-	bin/package.sh
+package: env
+	sbin/package.sh
+
+fat-zip: env
+	sbin/fat-zip.sh
 
 continuous-test:
-	bash bin/exec-continuous-test.sh
+	bash sbin/exec-continuous-test.sh
