@@ -1,14 +1,9 @@
-# IntelliJ files
+*~
+.DS_Store
 
-.idea
-env
-env-*
-# Python temporal files
-__pycache__
-*.egg-info
-*.pyc
-.coverage
+.idea/
+*.iml
 
-# package files
-dist
-build
+target/
+out/
+log/

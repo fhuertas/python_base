@@ -1,5 +1,5 @@
 import unittest
-from src.package_1 import module
+from $package$ import module
 
 
 class TestModule(unittest.TestCase):

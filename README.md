@@ -1,14 +1,21 @@
-# Python base module
+# scala-seed.g8
 
-## Make commands
+g8 template for scala projects. Run:
 
-* `make env`. Make a environment
-* `make clean`. Clean the elements 
-* `make test-clean`. Clean the tests
-* `make test`. make the tests
-* `make package`. build the artifact
-* `make continuous-test TEST=<test folder> PACKAGE=<package> [ENV=<env folder>]` 
+```bash
+# Create a library project
+$ sbt new fhuertas/scala-seed.g8
+```
 
-## Optional environment var for makefile
+```bash
+# Create a microservice project
+$ sbt new fhuertas/scala-seed.g8 -b microservice
 
-* PYTHON_VERSION: The version of python. i.e. 3.4
+Features
+
+* [ScalaTest](http://www.scalatest.org)
+
+Plugins
+
+* [sbt-scoverage](https://github.com/scoverage/sbt-scoverage)
+* [sbt-dependency-graph](https://github.com/jrudolph/sbt-dependency-graph)
